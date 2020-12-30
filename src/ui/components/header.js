@@ -7,11 +7,8 @@ export default class MenuHeader extends Component {
   render(){
     return (<Header className="header">
         <div style={{marginRight: 'auto'}} ></div>
-        <div style={{marginRight: 'auto'}} ></div>
         <h5>Pokedex</h5>
         <div style={{marginLeft: 'auto'}} >
-          <a className="ant-btn ant-btn-link"  style={{color:'#FFF'}}>Tipos</a>
-          <a className="ant-btn ant-btn-link"  style={{color:'#FFF'}}>Estadisticas</a>
           <a className="ant-btn ant-btn-link"  style={{color:'#FFF'}}>Login</a>
         </div>
       </Header>
