@@ -2,7 +2,7 @@ import React from 'react'
 import {Input, Form} from 'antd';
 
 
-function Text(props) {
+function Text(props, ref) {
     let {onChange, stateName, value, externalLabel, style, noFormItem} = props;
     let validateStatus;
     let help;
