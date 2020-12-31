@@ -3,8 +3,6 @@ import { fetchPokemons } from '../../fetch'
 import { Card, Button, Spin } from 'antd';
 import { LikeOutlined } from '@ant-design/icons';
 
-const { Meta } = Card;
-
 function UsePokemons(props) { 
     let structure = [];
     const [ usePokemons, statePokemons] = useState([]);
@@ -34,10 +32,7 @@ function UsePokemons(props) {
                             <div style={{marginRight: 'auto'}} ></div>
                             <h3 className="ant-card-meta-title">{name}</h3>
                             <div style={{marginLeft: 'auto'}} >
-                              <Button type="link" icon={<LikeOutlined  />}>
-
-                              </Button>
-                              
+                              <Button type="link" icon={<LikeOutlined  />} />
                             </div>
                           </div>
                       </Card>
