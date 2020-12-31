@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './ui/app';
 import { ConfigProvider } from 'antd';
 import * as serviceWorker from './serviceWorker';
-
+import { BrowserRouter as Router } from "react-router-dom";
 
 function Index() {
   return (
-    <div>
+    <Router>
         <ConfigProvider>
             <App />
         </ConfigProvider>
-    </div>
+    </Router>
   );
 }
 
