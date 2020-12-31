@@ -3,9 +3,10 @@ import { Select as AntSelect } from 'antd';
 
 const {Option} = AntSelect;
 
-function Select(props) {
+function Select(props, ref) {
   let {onChange, value, label, stateName, name,   data= [], notables, defaultValue, style = {}, ...otherProps} = props
-  , options = [<Option key='EMPTY'>{label}</Option>], alt_options = [];
+  , options = [<Option key='EMPTY'>{label}</Option>];
+  
   useEffect(() => {
     if (value) {
       if (!data.some(({value: v}) => v === value)) onChange()
@@ -14,15 +15,11 @@ function Select(props) {
 
   if (data.length) {
       options = [];
-      data.forEach( (d, i) => {
+      data.forEach((d, i) => {
         if (!d.value) return null;
         let style = {}
-        if (props.altOptions && !notables.includes(d.value)) {
-          alt_options.push(<Option style={style} value={d.value} key={d.name}>{d.name || d.value}</Option>)
-        } else {
           options.push(<Option style={style} value={d.value} key={d.name}>{d.name || d.value}</Option>)
-        }
-      } )
+      })
     }
 
     
