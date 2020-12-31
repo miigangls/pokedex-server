@@ -5,7 +5,8 @@ body{
 }
 
 a {
-  color: white;
+  color: white !important;
+  
 }
 
 label {
@@ -45,9 +46,21 @@ label {
     font-weight: 900;
   }
 
-  .header > .ant-btn .ant-btn-link {
-    color: #FFF;
+  .nav-item {
+    color: #FFF !important;
+    height: 70px !important;
+    border-bottom:0px !important;
   }
+
+  .header > .nav-link {
+    color: #FFF;
+    border-bottom: 0px;
+    height: 70px;
+  }
+      .header >.nav-link:hover {
+        color: #FFF !important;
+        border-bottom: 0px !important;
+      }
 
 
 .input-text {
