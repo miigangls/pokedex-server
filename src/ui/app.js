@@ -4,6 +4,7 @@ import { Switch, Route, Link  } from "react-router-dom";
 import '../styles/app.css';
 import Home from './pages/index';
 import Login from './pages/login';
+import Register from './pages/register';
 import NotFound from './pages/notFound';
 const { Content, Header, Footer } = Layout;
 
@@ -15,7 +16,10 @@ function App() {
           <h5>Pokedex</h5>
           <Menu style={{marginLeft: 'auto', height: 70,  backgroundColor: 'transparent'}} mode="horizontal">
             <Menu.Item className="nav-item"  key="login">
-              <Link className='nav-link' to="/login"> Login</Link>
+              <Link className='nav-link' to="/register">Registro</Link>
+            </Menu.Item>
+            <Menu.Item className="nav-item"  key="login">
+              <Link className='nav-link' to="/login">Ingresar</Link>
             </Menu.Item>
           </Menu>
         </Header>
@@ -24,8 +28,9 @@ function App() {
             <Switch>
               <Route exact path="/" component={Home} ></Route>
               <Route path="/login" ><Login />  </Route>
+              <Route path="/register" ><Register />  </Route>
               <Route component={NotFound} />
-              </Switch>
+            </Switch>
           </Content>
       </Layout>
       <Footer style={{ textAlign: 'center' }}> ©2020 Created by miigangls</Footer>
