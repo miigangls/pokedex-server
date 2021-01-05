@@ -13,7 +13,7 @@ function App() {
     <Layout style={{ minHeight: '100vh', overflowX:"hidden" }}>
       <Header className="header">
           <div style={{marginRight: 'auto'}} ></div>
-          <h5>Pokedex</h5>
+          <Link className='nav-link' to="/"><h5>Registro</h5></Link>
           <Menu style={{marginLeft: 'auto', height: 70,  backgroundColor: 'transparent'}} mode="horizontal">
             <Menu.Item className="nav-item"  key="login">
               <Link className='nav-link' to="/register">Registro</Link>
