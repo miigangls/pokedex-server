@@ -6,7 +6,8 @@ function Login() {
     <div className="content">
       <div style={{marginTop:'5rem' }}>
           <Form  className='form-content'>
-            <h5>Ingresar</h5>
+            <h5>Registro</h5>
+              
             <div className="label">
                 <label>Email</label>
             </div>
