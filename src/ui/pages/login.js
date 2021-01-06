@@ -1,6 +1,7 @@
 import React  from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
-import '../../styles/login.css'
+import { Form, Input, Button } from 'antd';
+import '../../styles/login.css'\
+
 function Login() {
   return (
     <div className="content">
