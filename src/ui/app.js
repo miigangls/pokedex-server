@@ -13,12 +13,13 @@ function App() {
     <Layout style={{ minHeight: '100vh', overflowX:"hidden" }}>
       <Header className="header">
           <div style={{marginRight: 'auto'}} ></div>
-          <Link className='nav-link' to="/"><h5>Registro</h5></Link>
+          <div style={{marginRight: 'auto'}} ></div>
+          <Link className='nav-link' to="/"><h5>Pokedex</h5></Link>
           <Menu style={{marginLeft: 'auto', height: 70,  backgroundColor: 'transparent'}} mode="horizontal">
-            <Menu.Item className="nav-item"  key="login">
+            <Menu.Item className="nav-item"  key="registro">
               <Link className='nav-link' to="/register">Registro</Link>
             </Menu.Item>
-            <Menu.Item className="nav-item"  key="login">
+            <Menu.Item className="nav-item"  key="ingresar">
               <Link className='nav-link' to="/login">Ingresar</Link>
             </Menu.Item>
           </Menu>
