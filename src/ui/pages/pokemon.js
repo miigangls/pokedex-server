@@ -17,7 +17,7 @@ function UsePokemons(props) {
     structure = usePokemons.reduce((memo, {name, url }, i) => {
         let rowIndex = url.split('/')[url.split('/').length - 2];
         let img = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${rowIndex}.png?raw=true`;
-      memo[i % 4].push({name, img });
+      memo[i % 4].push({name, img, key: i });
       return memo
     }, [[],[],[],[]])
   return (
@@ -25,14 +25,15 @@ function UsePokemons(props) {
       <div style={{display: 'table', pageBreakInside:'auto'}}>
         {structure.map((row, i) => {
               return <div key={i} style={{display: "table-cell"}}>
-                {row.map(({name, img}, i) => {
+                {row.map(({name, img, key}, j) => {
+                  let className = (props.useFavorites[key]) ?  'ant-btn-favorite' : ''
                   return <div key={name} style={{margin: "10px 25px", pageBreakInside:'avoid', pageBreakAfter:"auto"}}>
-                      <Card hoverable style={{ width: 240 }} cover={<img alt="example" src={img} />} >
+                      <Card   key={name} hoverable style={{ width: 240 }} cover={<img alt="example" src={img} />} >
                           <div className='input-row' style={{margin: 5}}>
                             <div style={{marginRight: 'auto'}} ></div>
                             <h3 className="ant-card-meta-title">{name}</h3>
                             <div style={{marginLeft: 'auto'}} >
-                              <Button type="link" icon={<LikeOutlined  />} />
+                              <Button className={className} onClick={()=> props.onFavorites(key, name)} type="link" icon={<LikeOutlined  />} />
                             </div>
                           </div>
                       </Card>

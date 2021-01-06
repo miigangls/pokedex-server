@@ -133,3 +133,10 @@ label {
       border:1px solid #fff;
       border-radius: 5px;
     }
+
+    .ant-card-body .ant-btn-favorite {
+      background-color: #e58181;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 5px;
+    }
